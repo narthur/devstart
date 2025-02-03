@@ -33,6 +33,12 @@ if [ -n "$(ls -A "$target_path" 2>/dev/null)" ]; then
     fi
 fi
 
+# Initialize git if not already initialized
+if [ ! -d "$target_path/.git" ]; then
+    echo "Initializing git repository..."
+    (cd "$target_path" && git init)
+fi
+
 # Get the script path
 script_path="$SCRIPT_DIR/scripts/${command}.sh"
 
