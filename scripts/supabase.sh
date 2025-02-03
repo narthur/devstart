@@ -7,8 +7,7 @@ echo "Setting up new Supabase project in $target_path..."
 
 # Check if Supabase CLI is installed
 if ! command -v supabase &> /dev/null; then
-    echo "Supabase CLI not found. Please install it first:"
-    echo "npm install -g supabase"
+    echo "Supabase CLI not found. Please install it first."
     exit 1
 fi
 
