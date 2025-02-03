@@ -1,6 +1,9 @@
 #!/bin/bash
 
-echo "Setting up new Supabase project..."
+target_path="$1"
+cd "$target_path" || exit 1
+
+echo "Setting up new Supabase project in $target_path..."
 
 # Check if Supabase CLI is installed
 if ! command -v supabase &> /dev/null; then
